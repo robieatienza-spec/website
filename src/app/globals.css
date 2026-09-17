@@ -1,0 +1,66 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+:root {
+  --background: #f7f2e7;
+  --foreground: #16130f;
+  --muted: #ece4d2;
+  --muted-foreground: #6b6355;
+  --border: #ddd3bb;
+  --accent: #ff5a36;
+  --accent-foreground: #16130f;
+  --accent-2: #2b3a55;
+  --card: #ffffff;
+  --radius: 1rem;
+
+  --font-display: "Lilita One", "Arial Black", sans-serif;
+  --font-serif: "Fraunces", "Georgia", serif;
+  --font-sans: "Inter", "Helvetica Neue", sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-2: var(--accent-2);
+  --color-card: var(--card);
+  --radius-lg: var(--radius);
+
+  --font-display: var(--font-display);
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #14120f;
+    --foreground: #f7f2e7;
+    --muted: #211d17;
+    --muted-foreground: #a89f8c;
+    --border: #332d24;
+    --card: #1c1812;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* offset anchored sections so the sticky nav never covers the heading */
+section[id] {
+  scroll-margin-top: 5.5rem;
+}
