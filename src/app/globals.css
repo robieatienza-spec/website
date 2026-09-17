@@ -53,6 +53,7 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
+  padding-bottom: 6rem;
 }
 
 ::selection {
@@ -60,7 +61,6 @@ body {
   color: #fff;
 }
 
-/* offset anchored sections so the sticky nav never covers the heading */
 section[id] {
-  scroll-margin-top: 5.5rem;
+  scroll-margin-top: 1.5rem;
 }

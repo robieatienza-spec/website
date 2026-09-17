@@ -1,9 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import { Home, Sparkles, LayoutGrid, Workflow, Mail } from "lucide-react";
 import { ExpandableTabs } from "@/components/ui/expandable-tabs";
-import { Button } from "@/components/ui/button";
 
 const tabs = [
   { title: "Start", icon: Home, href: "#start" },
@@ -16,21 +14,11 @@ const tabs = [
 
 export function Navbar() {
   return (
-    <header className="fixed top-0 inset-x-0 z-50 px-4 sm:px-6 pt-4">
-      <div className="mx-auto max-w-6xl flex items-center justify-between gap-3">
-        <Link
-          href="#start"
-          className="font-display text-xl sm:text-2xl tracking-wide bg-card/90 backdrop-blur border border-border rounded-full px-4 py-2 shadow-sm shrink-0"
-        >
-          Real<span className="text-accent">8</span>
-        </Link>
-
-        <ExpandableTabs tabs={tabs} className="mx-auto" />
-
-        <Button asChild size="sm" className="hidden sm:inline-flex shrink-0">
-          <a href="#kontakt">Projekt starten</a>
-        </Button>
-      </div>
-    </header>
+    <nav
+      aria-label="Hauptnavigation"
+      className="fixed inset-x-0 bottom-4 z-50 flex justify-center px-4"
+    >
+      <ExpandableTabs tabs={tabs} />
+    </nav>
   );
 }
